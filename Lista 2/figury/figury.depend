@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1489746842 source:c:\users\manie\onedrive - uniwersytet wroc³awski\c++\lista 2\figury\figury.cpp
+	<iostream>
+	<math.h>
+	<cmath>
+	"figury.h"
+
+1489747634 c:\users\manie\onedrive - uniwersytet wroc³awski\c++\lista 2\figury\figury.h
+	<iostream>
+
+1489742721 source:c:\users\manie\onedrive - uniwersytet wroc³awski\c++\lista 2\figury\main.cpp
+	<iostream>
+	<math.h>
+	"figury.h"
+

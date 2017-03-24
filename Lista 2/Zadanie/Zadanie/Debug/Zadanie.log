@@ -1,0 +1,155 @@
+﻿  klasy.cpp
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(6): error C2653: 'Punkt': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(6): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(7): error C2065: 'x': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(8): error C2065: 'y': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(9): warning C4508: 'Punkt': function should return a value; 'void' return type assumed
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(11): error C2653: 'Punkt': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(12): error C2065: 'x': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(13): error C2065: 'y': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(16): error C2653: 'Punkt': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(16): error C2146: syntax error: missing ')' before identifier 'punkt'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(16): error C2143: syntax error: missing ';' before '{'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(16): error C2447: '{': missing function header (old-style formal list?)
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(22): error C2653: 'Odcinek': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(22): error C2146: syntax error: missing ')' before identifier 'x'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(22): error C2143: syntax error: missing ';' before '{'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(22): error C2447: '{': missing function header (old-style formal list?)
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(27): error C2653: 'Odcinek': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(27): error C2084: function 'void przesun(double,double)' already has a body
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(11): note: see previous definition of 'przesun'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(28): error C2065: 'poczatek': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(28): error C2228: left of '.przesun' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(28): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(29): error C2065: 'koniec': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(29): error C2228: left of '.przesun' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(29): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(31): error C2653: 'Odcinek': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(31): error C2146: syntax error: missing ')' before identifier 'punkt'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(31): error C2143: syntax error: missing ';' before '{'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(31): error C2447: '{': missing function header (old-style formal list?)
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(35): error C2653: 'Odcinek': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(36): error C2065: 'koniec': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(36): error C2228: left of '.x' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(36): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(36): error C2065: 'poczatek': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(36): error C2228: left of '.y' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(36): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(38): error C2653: 'Odcinek': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(38): error C2146: syntax error: missing ')' before identifier 'x'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(38): error C2143: syntax error: missing ';' before '{'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(38): error C2447: '{': missing function header (old-style formal list?)
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(45): error C2653: 'Odcinek': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(45): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(45): error C2365: 'Punkt': redefinition; previous definition was 'function'
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(6): note: see declaration of 'Punkt'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(45): error C2146: syntax error: missing ';' before identifier 'srodek'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(45): error C2143: syntax error: missing ';' before '{'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(45): error C2447: '{': missing function header (old-style formal list?)
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(49): error C2653: 'Odcinek': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(50): error C2065: 'koniec': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(50): error C2228: left of '.y' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(50): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(50): error C2065: 'poczatek': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(50): error C2228: left of '.x' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(50): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(53): error C2653: 'Trojkat': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(53): error C2146: syntax error: missing ')' before identifier 'x'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(53): error C2143: syntax error: missing ';' before '{'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(53): error C2447: '{': missing function header (old-style formal list?)
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(58): error C2653: 'Trojkat': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(59): error C2065: 'pierwszy': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(59): error C2228: left of '.przesun' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(59): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(60): error C2065: 'drugi': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(60): error C2228: left of '.przesun' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(60): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(61): error C2065: 'trzeci': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(61): error C2228: left of '.przesun' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(61): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(63): error C2653: 'Trojkat': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(63): error C2146: syntax error: missing ')' before identifier 'punkt'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(63): error C2143: syntax error: missing ';' before '{'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(63): error C2447: '{': missing function header (old-style formal list?)
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(68): error C2653: 'Trojkat': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(69): error C2065: 'Odcinek': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(69): error C2146: syntax error: missing ';' before identifier 'x'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(69): error C2065: 'x': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(69): error C2065: 'pierwszy': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(69): error C2065: 'drugi': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(69): error C3861: 'Odcinek': identifier not found
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(70): error C2065: 'Odcinek': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(70): error C2146: syntax error: missing ';' before identifier 'y'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(70): error C2065: 'y': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(70): error C2065: 'drugi': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(70): error C2065: 'trzeci': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(70): error C3861: 'Odcinek': identifier not found
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(71): error C2065: 'Odcinek': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(71): error C2146: syntax error: missing ';' before identifier 'z'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(71): error C2065: 'z': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(71): error C2065: 'trzeci': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(71): error C2065: 'pierwszy': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(71): error C3861: 'Odcinek': identifier not found
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(72): error C2065: 'x': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(72): error C2228: left of '.dlugosc' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(72): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(72): error C2065: 'y': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(72): error C2065: 'z': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(74): error C2653: 'Trojkat': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(75): error C2065: 'drugi': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(75): error C2228: left of '.x' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(75): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(75): error C2065: 'pierwszy': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(75): error C2065: 'trzeci': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(75): error C2228: left of '.y' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(75): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(76): error C2065: 'drugi': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(76): error C2228: left of '.y' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(76): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(76): error C2065: 'pierwszy': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(76): error C2065: 'trzeci': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(76): error C2228: left of '.x' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(76): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(78): error C2653: 'Trojkat': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(78): error C2146: syntax error: missing ')' before identifier 'punkt'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(78): error C2143: syntax error: missing ';' before '{'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(78): error C2447: '{': missing function header (old-style formal list?)
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(84): error C2653: 'Trojkat': is not a class or namespace name
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(84): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(84): error C2365: 'Punkt': redefinition; previous definition was 'function'
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(6): note: see declaration of 'Punkt'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(84): error C2146: syntax error: missing ';' before identifier 'srodek'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(84): error C2143: syntax error: missing ';' before '{'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(84): error C2447: '{': missing function header (old-style formal list?)
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\klasy.cpp(84): fatal error C1003: error count exceeds 100; stopping compilation
+  Zadanie.cpp
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(13): error C2065: 'Punkt': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(13): error C2146: syntax error: missing ';' before identifier 'punkcik'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(13): error C2065: 'punkcik': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(13): error C3861: 'Punkt': identifier not found
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(15): error C2065: 'cout': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(15): error C2065: 'punkcik': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(15): error C2228: left of '.x' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(15): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(15): error C2228: left of '.y' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(15): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(15): error C2065: 'endl': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(16): error C2065: 'Punkt': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(16): error C2146: syntax error: missing ';' before identifier 'x'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(16): error C2065: 'x': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(16): error C3861: 'Punkt': identifier not found
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(17): error C2065: 'punkcik': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(17): error C2228: left of '.obroc' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(17): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(17): error C2065: 'x': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(18): error C2065: 'cout': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(18): error C2065: 'punkcik': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(18): error C2228: left of '.x' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(18): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(18): error C2228: left of '.y' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(18): note: type is 'unknown-type'
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(18): error C2065: 'endl': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(19): error C2065: 'punkcik': undeclared identifier
+c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(19): error C2228: left of '.przesun' must have class/struct/union
+  c:\users\manie\onedrive - uniwersytet wrocławski\c++\lista 2\zadanie\zadanie\zadanie.cpp(19): note: type is 'unknown-type'
+  Generating Code...
