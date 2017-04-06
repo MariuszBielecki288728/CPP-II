@@ -1,0 +1,5 @@
+﻿  header.cpp
+d:\onedrive - uniwersytet wrocławski\c++\cpp-ii\lista 4\wielomiany\wielomiany\header.cpp(263): fatal error C1010: Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego nagłówka. Czy zapomniano dodać "#include "stdafx.h"" do twojego źródła?
+  Wielomiany.cpp
+d:\onedrive - uniwersytet wrocławski\c++\cpp-ii\lista 4\wielomiany\wielomiany\wielomiany.cpp(68): fatal error C1010: Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego nagłówka. Czy zapomniano dodać "#include "stdafx.h"" do twojego źródła?
+  Generowanie kodu...
