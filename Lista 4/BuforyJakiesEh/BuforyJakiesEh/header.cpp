@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include "header.h"
-
+using namespace std;
 
 lista::lista()
 {
@@ -9,78 +9,78 @@ lista::lista()
 	this->size = 0;
 }
 
-lista::lista(const lista &pattern) : lista()
+lista::lista(const lista &ob) : lista()
 {
-	if (pattern.getSize() == 0)
+	if (ob.rozmiar() == 0)
 		return;
-	wezel *iterator = pattern.first;
-	do
+	wezel *wsk = ob.first;
+	do//dodajemy w petli kolejne elementy ze kopiowanej listy
 	{
-		this->wstaw(this->size, iterator->value);
-		iterator = iterator->next;
-	} while (iterator != pattern.first);
+		this->wstaw(this->size, wsk->value);
+		wsk = wsk->next;
+	} while (wsk != ob.first);
 }
 
-lista::lista(lista &&pattern) : lista()
+lista::lista(lista &&ob) : lista()
 {
-	if (pattern.getSize() == 0)
+	if (ob.rozmiar() == 0)
 		return;
-	this->size = pattern.size;
-	this->first = pattern.first;
-	this->last = pattern.last;
-	pattern.first = pattern.last = nullptr;
+	this->size = ob.size;
+	this->first = ob.first;
+	this->last = ob.last;
+	ob.first = ob.last = nullptr;
 }
 
 lista::~lista()
 {
 	if (this->first == nullptr)
 		return;
-	wezel *iterator = first;
-	wezel *iteratorpom = first->next;
-	for (int i = 0; i<this->size; i++)
+	wezel *wsk = first;
+	wezel *pomwsk = first->next;
+	for (int i = 0; i < this->size; i++)
 	{
-		delete iterator;
-		iterator = iteratorpom;
-		iteratorpom = iteratorpom->next;
+		delete wsk;
+		wsk = pomwsk;
+		pomwsk = pomwsk->next;
 	}
 	this->size = 0;
 	this->first = this->last = nullptr;
 }
 
-lista& lista::operator=(const lista &pattern)
+lista& lista::operator=(const lista &ob)
 {
 	this->~lista();
 
-	if (pattern.getSize() == 0)
+	if (ob.rozmiar() == 0)
 		return *this;
 	this->size = 0;
 	this->first = this->last = nullptr;
-	wezel *iterator = pattern.first;
+	wezel *iterator = ob.first;
 	do
 	{
 		this->wstaw(this->size, iterator->value);
 		iterator = iterator->next;
-	} while (iterator != pattern.first);
+	} while (iterator != ob.first);
 	return *this;
 }
 
-lista& lista::operator=(lista &&pattern)
+lista& lista::operator=(lista &&ob)
 {
 	this->~lista();
 
-	if (pattern.getSize() == 0)
+	if (ob.rozmiar() == 0)
 		return *this;
-	this->size = pattern.size;
-	this->first = pattern.first;
-	this->last = pattern.last;
-	pattern.first = pattern.last = nullptr;
+	this->size = ob.size;
+	this->first = ob.first;
+	this->last = ob.last;
+	ob.first = ob.last = nullptr;
 	return *this;
 }
 
 lista::wezel& lista::operator[](int pos) const
 {
 	if (pos < 0 || pos >= this->size)
-		throw std::string("operator[](int): bledny indeks!\n");
+		throw string("operator[](int): bledny indeks!\n");
 	return this->first->index(pos);
 }
 
@@ -88,12 +88,12 @@ void* lista::wezel::operator new(size_t)
 {
 	try
 	{
-		return (Memory::getInstance()).getAddress();
+		return (KlasaPomocniczaDoTab::getKlPom()).getAddress();
 	}
-	catch (std::string message)
+	catch (string message)
 	{
-		std::string newmess = "operator new(size_t):" + message;
-		throw std::string(newmess);
+		string newmess = "new(size_t):" + message;
+		throw string(newmess);
 	}
 }
 
@@ -101,23 +101,23 @@ void lista::wezel::operator delete(void *address)
 {
 	try
 	{
-		Memory::getInstance().freeAddress(reinterpret_cast<wezel*>(address));
+		KlasaPomocniczaDoTab::getKlPom().zwolnijAdres(reinterpret_cast<wezel*>(address));
 	}
-	catch (std::string message)
+	catch (string message)
 	{
-		std::string newmess;
-		newmess = "operator delete(void*):" + message;
-		throw std::string(newmess);
+		string newmess;
+		newmess = "delete(void*) " + message;
+		throw string(newmess);
 	}
 }
 
 
-void lista::wstaw(int pos, double val)
+void lista::wstaw(int index, double val)
 {
-	if (pos < 0)
-		throw std::string("wstaw(int,double): indeks mniejszy od 0!\n");
-	else if (pos > this->size)
-		pos = this->size;
+	if (index < 0)
+		throw string("wstaw(int,double) - indeks nie moze byc mniejszy niz 0!\n");
+	else if (index > this->size)
+		index = this->size;
 	if (this->first == nullptr && this->last == nullptr)
 	{
 		wezel *add = new wezel(val);
@@ -128,20 +128,20 @@ void lista::wstaw(int pos, double val)
 		this->size++;
 		return;
 	}
-	wezel *a = this->first->wstaw(pos, val);
-	if (pos == 0)
+	wezel *a = this->first->wstaw(index, val);
+	if (index == 0)
 		first = a;
-	else if (pos == this->size)
+	else if (index == this->size)
 		last = a;
 	this->size++;
 }
 
-double lista::usun(int pos)
+double lista::usun(int index)
 {
 	if (size <= 0)
-		throw std::string("usun(int): nie ma czego usuwac!\n");
-	else if (pos >= this->size)
-		throw std::string("usun(int): za wysoki indeks!\n");
+		throw string("usun(int): nie mam juz czego usunac\n");
+	else if (index >= this->size)
+		throw string("usun(int): indeks poza zakresem\n");
 	else if (this->first == this->last)
 	{
 		double v = first->value;
@@ -150,7 +150,7 @@ double lista::usun(int pos)
 		this->size--;
 		return v;
 	}
-	else if (pos == this->size - 1)
+	else if (index == this->size - 1)
 	{
 		this->size--;
 		wezel *h = last->previous;
@@ -158,7 +158,7 @@ double lista::usun(int pos)
 		last = h;
 		return v;
 	}
-	else if (pos == 0)
+	else if (index == 0)
 	{
 		this->size--;
 		wezel *h = first->next;
@@ -167,28 +167,28 @@ double lista::usun(int pos)
 		return v;
 	}
 	this->size--;
-	return first->usun(pos);
+	return first->usun(index);
 }
 
-int lista::getSize() const
+int lista::rozmiar() const
 {
 	return this->size;
 }
 
-std::ostream& operator<<(std::ostream &wy, const lista &pattern)
+ostream& operator<<(ostream &wy, const lista &ob)
 {
-	if (pattern.getSize() == 0)
+	if (ob.rozmiar() == 0)
 		return wy;
-	lista::wezel *iterator = pattern.first;
+	lista::wezel *wsk = ob.first;
 	do
 	{
-		wy << *iterator << " ";
-		iterator = iterator->next;
-	} while (iterator != pattern.first);
+		wy << *wsk << " ";
+		wsk = wsk->next;
+	} while (wsk != ob.first);
 	return wy;
 }
 
-std::istream& operator>>(std::istream &we, lista &list)
+istream& operator>>(istream &we, lista &list)
 {
 	list.~lista();
 
@@ -208,37 +208,37 @@ std::istream& operator>>(std::istream &we, lista &list)
 
 lista::wezel::wezel(double val)
 {
-	this->value = val;
+	value = val;
 }
 
-lista::wezel::wezel(const wezel &pattern)
+lista::wezel::wezel(const wezel &ob)
 {
-	this->value = pattern.value;
+	value = ob.value;
 }
 
-lista::wezel::wezel(wezel &&pattern)
+lista::wezel::wezel(wezel &&ob)
 {
-	this->value = pattern.value;
+	value = ob.value;
 }
 
-lista::wezel* lista::wezel::wstaw(int pos, double val)
+lista::wezel* lista::wezel::wstaw(int index, double val)
 {
-	if (pos == 0)
+	if (index == 0)
 	{
 		wezel *add = new wezel(val);
 		add->next = this;
-		add->previous = this->previous;
-		this->previous->next = add;
-		this->previous = add;
+		add->previous = previous;
+		previous->next = add;
+		previous = add;
 		return add;
 	}
 
-	return this->next->wstaw(pos - 1, val);
+	return next->wstaw(index - 1, val);
 }
 
-double lista::wezel::usun(int pos)
+double lista::wezel::usun(int index)
 {
-	if (pos == 0)
+	if (index == 0)
 	{
 		double v = this->value;
 		this->previous->next = this->next;
@@ -246,7 +246,7 @@ double lista::wezel::usun(int pos)
 		delete this;
 		return v;
 	}
-	return this->next->usun(pos - 1);
+	return this->next->usun(index - 1);
 }
 
 lista::wezel& lista::wezel::index(int pos)
@@ -256,21 +256,75 @@ lista::wezel& lista::wezel::index(int pos)
 	return this->next->index(pos - 1);
 }
 
-lista::wezel& lista::wezel::operator=(const wezel& pattern)
+lista::wezel& lista::wezel::operator=(const wezel& ob)
 {
 	this->~wezel();
 
-	this->value = pattern.value;
+	this->value = ob.value;
 	return *this;
 }
 
-lista::wezel& lista::wezel::operator=(wezel &&pattern)
+lista::wezel& lista::wezel::operator=(wezel &&ob)
 {
 	this->~wezel();
 
-	this->value = pattern.value;
+	this->value = ob.value;
 	return *this;
 }
+
+
+
+
+
+
+
+
+lista::wezel KlasaPomocniczaDoTab::tablica[KlasaPomocniczaDoTab::size];
+bool KlasaPomocniczaDoTab::flags[KlasaPomocniczaDoTab::size]; //tablica wskazuj¹ca ktore elementy sa wolne
+
+lista::wezel* KlasaPomocniczaDoTab::getAddress()
+{
+	int i;
+	for (i = 0; i < size && flags[i] == 0; i++);
+
+	if (i == size)
+		throw string("Nie ma ju¿ miejsca w tablicy globalnej\n");
+	else
+	{
+		flags[i] = 0;
+		return &tablica[i];
+	}
+
+}
+
+void KlasaPomocniczaDoTab::zwolnijAdres(lista::wezel *address)
+{
+	int i = 0;
+	while (i != size && &tablica[i] != address)
+		i++;
+
+	if (i == size)
+		throw string("nie ma takiego adresu\n");
+	else
+		flags[i] = 1;
+}
+
+void KlasaPomocniczaDoTab::drukuj() {
+	for (int i = 0; i < size; i++) {
+		cout << tablica[i];
+	}
+	cout << endl;
+	for (int i = 0; i < size; i++) {
+		cout << flags[i];
+	}
+	cout << endl;
+
+}
+
+
+
+
+
 
 
 
@@ -297,17 +351,19 @@ double kolejka::operator--()
 	{
 		return this->usun();
 	}
-	catch (std::string message)
+	catch (string message)
 	{
-		std::string newmess;
-		newmess = "kolejka::operator--():" + message;
-		throw std::string(newmess);
+		string newmess;
+		newmess = "kolejka - operator-- - " + message;
+		throw string(newmess);
 	}
 }
 
 double kolejka::gotowy()
 {
-	return this->first->value;
+	if (first != nullptr)
+		return this->first->value;
+	else throw(string("pusta kolejka"));
 }
 
 double kolejka::operator*()
@@ -345,11 +401,11 @@ double stos::operator--()
 	{
 		return this->usun();
 	}
-	catch (std::string message)
+	catch (string message)
 	{
-		std::string newmess;
-		newmess = "stos::operator--():" + message;
-		throw std::string(newmess);
+		string newmess;
+		newmess = "stos - operator-- " + message;
+		throw string(newmess);
 	}
 }
 
@@ -370,32 +426,3 @@ int stos::ile()
 
 
 
-lista::wezel Memory::ground[Memory::size];
-bool Memory::flags[Memory::size]; //1 - free, 0 - occupied
-
-lista::wezel* Memory::getAddress()
-{
-	int i;
-	for (i = 0; i < size && flags[i] == 0; i++);
-
-	if (i == size)
-		throw std::string("getAddress(): wszystkie sloty sa zajete!\n");
-	else
-	{
-		flags[i] = 0;
-		return &ground[i];
-	}
-
-}
-
-void Memory::freeAddress(lista::wezel *address)
-{
-	int i = 0;
-	while (i != size && &ground[i] != address)
-		i++;
-
-	if (i == size)
-		throw std::string("freeAddress(): miejsce pod wezel nie zostalo wziete z tej tablicy!\n");
-	else
-		flags[i] = 1;
-}

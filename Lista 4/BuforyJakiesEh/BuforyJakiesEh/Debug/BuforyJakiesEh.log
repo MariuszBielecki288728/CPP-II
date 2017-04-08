@@ -1,0 +1,5 @@
+﻿  header.cpp
+d:\onedrive - uniwersytet wrocławski\c++\cpp-ii\lista 4\buforyjakieseh\buforyjakieseh\header.cpp(110): warning C4297: "lista::wezel::operator delete": wygenerowano wyjątek przy założeniu, że funkcja nie generuje wyjątku lecz wygenerowała
+  d:\onedrive - uniwersytet wrocławski\c++\cpp-ii\lista 4\buforyjakieseh\buforyjakieseh\header.cpp(110): note: destruktor lub program wycofujący przydzielenia ma (być może niejawną) specyfikację wyjątku niezwracalnego
+  BuforyJakiesEh.vcxproj -> D:\OneDrive - Uniwersytet Wrocławski\C++\CPP-II\Lista 4\BuforyJakiesEh\Debug\BuforyJakiesEh.exe
+  BuforyJakiesEh.vcxproj -> D:\OneDrive - Uniwersytet Wrocławski\C++\CPP-II\Lista 4\BuforyJakiesEh\Debug\BuforyJakiesEh.pdb (Partial PDB)

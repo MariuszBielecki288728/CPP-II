@@ -16,55 +16,87 @@ protected:
 		wezel *next;
 
 		wezel() = default;
-		wezel(double val);
-		wezel(const wezel &pattern);
-		wezel(wezel &&pattern);
-		wezel* wstaw(int pos, double val);
-		double usun(int pos);
-		wezel& index(int pos);
-		wezel& operator=(const wezel &pattern);
-		wezel& operator=(wezel &&pattern);
+		wezel(double);
+		wezel(const wezel &);
+		wezel(wezel &&);
+		wezel* wstaw(int , double );
+		double usun(int );
+		wezel& index(int );
+		wezel& operator=(const wezel &);
+		wezel& operator=(wezel &&);
 		static void* operator new(size_t);
-		static void operator delete(void *address);
+		static void operator delete(void *);
 
-		friend std::ostream& operator<<(std::ostream& wy, const wezel& pattern)
-		{
-			return wy << pattern.value;
-		}
+		friend std::ostream& operator<<(std::ostream& out, const wezel& x)
+		{	return out << x.value;	}
+
+
 	};
 	wezel *first;
 	wezel *last;
 	int size;
 public:
 	lista();
-	lista(const lista &pattern);
-	lista(lista &&pattern);
+	lista(const lista &);
+	lista(lista &&);
 	~lista();
-	lista& operator=(const lista &pattern);
-	lista& operator=(lista &&pattern);
-	void wstaw(int pos, double val);
-	double usun(int pos);
-	int getSize() const;
-	wezel& operator[](int pos) const;
+	lista& operator=(const lista &);
+	lista& operator=(lista &&);
+	void wstaw(int , double );
+	double usun(int );
+	int rozmiar() const;
+	wezel& operator[](int ) const;
 
-	friend std::istream& operator>>(std::istream &we, lista &list);
-	friend std::ostream& operator<<(std::ostream &wy, const lista &pattern);
-	friend std::ostream& operator<<(std::ostream& wy, const wezel& pattern);
-	friend class Memory;
+	friend std::istream& operator>>(std::istream &, lista &);
+	friend std::ostream& operator<<(std::ostream &, const lista &);
+	friend std::ostream& operator<<(std::ostream& , const wezel& );
+	friend class KlasaPomocniczaDoTab;
 
 	
 };
 
 
+
+class KlasaPomocniczaDoTab
+{
+private:
+	static const int size = 20;
+	static lista::wezel tablica[size];
+	static bool flags[size]; //1 wolne
+	KlasaPomocniczaDoTab()
+	{
+		std::fill_n(flags, size, 1);
+	}
+
+public:
+	static KlasaPomocniczaDoTab& getKlPom()
+	{
+		static KlasaPomocniczaDoTab instance;
+		return instance;
+	}
+	~KlasaPomocniczaDoTab() = default;
+	KlasaPomocniczaDoTab(KlasaPomocniczaDoTab const&) = delete;
+	KlasaPomocniczaDoTab(KlasaPomocniczaDoTab &&) = delete;
+	void operator=(KlasaPomocniczaDoTab const&) = delete;
+	void operator=(KlasaPomocniczaDoTab &&) = delete;
+	lista::wezel* getAddress();
+	void zwolnijAdres(lista::wezel *);
+
+	void drukuj();
+};
+
+
+
+
+
 class kolejka : protected lista
 {
-	//posiadam chronione pola first, last oraz size. mam tez odziedziczona klase wezel
 public:
 	using lista::lista; //dziedziczenie konstruktorow
-	kolejka& operator+=(double val);
+	kolejka& operator+=(double );
 	double operator--();
 	double operator*();
-	void wstaw(double val);
+	void wstaw(double );
 	double usun();
 	double gotowy();
 	int ile();
@@ -73,13 +105,12 @@ public:
 
 class stos : protected lista
 {
-	//posiadam chronione pola first, last oraz size. mam tez odziedziczona klase wezel
 public:
 	using lista::lista;
-	stos& operator+=(double val);
+	stos& operator+=(double );
 	double operator--();
 	double operator*();
-	void wstaw(double val);
+	void wstaw(double );
 	double usun();
 	double gotowy();
 	int ile();
@@ -87,28 +118,3 @@ public:
 
 
 
-class Memory
-{
-private:
-	static const int size = 10;
-	static lista::wezel ground[size];
-	static bool flags[size]; //1 - free, 0 - occupied
-	Memory()
-	{
-		std::fill_n(flags, size, 1);
-	}
-
-public:
-	static Memory& getInstance()
-	{
-		static Memory instance; //statyczny obiekt jest inicjalizowany przy pierwszym wywolaniu i istnieje do konca programu
-		return instance;
-	}
-	~Memory() = default;
-	Memory(Memory const&) = delete;
-	Memory(Memory &&) = delete;
-	void operator=(Memory const&) = delete;
-	void operator=(Memory &&) = delete;
-	lista::wezel* getAddress();
-	void freeAddress(lista::wezel *address);
-};
