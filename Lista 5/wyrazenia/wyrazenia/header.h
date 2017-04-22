@@ -3,6 +3,7 @@
 using namespace std;
 
 class wyrazenie {
+public:
 	virtual double oblicz() = 0;
 	virtual string opis() = 0;
 
@@ -51,23 +52,24 @@ public:
 	zmienna(string s);
 	virtual double oblicz();
 	virtual string opisz();
-	void dodaj_wartosc_zmiennej(string, double);
-	void zmien_war_zmiennej(string, double);
-	void usun_zmienna(string);
+	static void dodaj_wartosc_zmiennej(string, double);
+	static void usun_zmienna(string);
+	static double znajdz_zmienna(string);
 };
 
 
 class operator1arg : public wyrazenie {
 public:
+	//operator1arg(wyrazenie *);
 	~operator1arg();
 protected:
 	wyrazenie *w1;
 	int priorytet;
 	bool lacznasc; //false - lewo, true - prawo
 };
-class sin : public operator1arg {
+class Sin : public operator1arg {
 public:
-	sin(wyrazenie *);
+	Sin(wyrazenie *);
 	virtual double oblicz();
 	virtual string opisz();
 };

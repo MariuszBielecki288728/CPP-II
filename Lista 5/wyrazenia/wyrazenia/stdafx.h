@@ -15,6 +15,7 @@
 // TODO: W tym miejscu odwo³aj siê do dodatkowych nag³ówków wymaganych przez program
 #include "header.h"
 #include <string>
-#include <math.h>
+//#include <math.h>
 #include <vector>
 #include <iostream>
+#include <cmath>
