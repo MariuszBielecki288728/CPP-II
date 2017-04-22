@@ -138,7 +138,7 @@ public:
 };
 class dziel : public operator2arg {
 public:
-	dzielj(wyrazenie *, wyrazenie *);
+	dziel(wyrazenie *, wyrazenie *);
 	virtual double oblicz();
 	virtual string opisz();
 
